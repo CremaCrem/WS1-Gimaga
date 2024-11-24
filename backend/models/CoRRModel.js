@@ -32,9 +32,13 @@ const CoRRSchema = new Schema({
   },
   status: {
     type: String,
-    enum: ['Pending', 'Approved', 'Rejected'],
+    enum: ['Pending', 'Approved'],
     default: 'Pending'
-  }
+  },
+  certificateType: {
+    type: String,
+    default: 'Certifacte of Residency'
+  },
 });
 
 const CoRRModel = mongoose.model('Certificate of Residency Registration', CoRRSchema);

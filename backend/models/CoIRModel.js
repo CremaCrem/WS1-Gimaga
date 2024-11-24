@@ -17,6 +17,15 @@ const CoISchema = new mongoose.Schema({
   applicationDate: {
     type: Date,
     default: Date.now, 
+  },
+  status: {
+    type: String,
+    enum: ['approved', 'pending'],
+    default: 'pending',
+  },
+  certificateType: {
+    type: String,
+    default: 'Certificate of Indigency'
   }
 });
 

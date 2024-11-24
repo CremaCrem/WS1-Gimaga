@@ -14,6 +14,10 @@ const barangayClearanceSchema = new mongoose.Schema({
     enum: ['personal', 'business', 'other'],
     required: true,
   },
+  certificateType: {
+    type: String,
+    default: 'Barangay Clearance'
+  },
   phoneNumber: {
     type: String,
     required: true,
@@ -25,6 +29,11 @@ const barangayClearanceSchema = new mongoose.Schema({
   governmentId: { 
     type: String,
     required: true,  
+  },
+  status: {
+    type: String,
+    enum: ['approved', 'pending'],
+    default: 'pending',
   },
 }, {
   timestamps: true,
